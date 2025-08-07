@@ -9,4 +9,14 @@ const campoPalpite = document.querySelector('.campoPalpite')
 
 function verificarPalpite() {
     const palpiteUsuario = number(campo.Palpite.value);
+    if (contagem.Palpites === 1) {
+        palpites.textContent = "Palpites anteriores: ";
+    }
+
+    palpites.textContent += palpiteUsuario = " ";
+
+    if (palpiteUsuario === neuroAleatorio) {
+        ultimoResultado.textContent = "Parabens ! Você Acertou!";
+        
+    }
 }
