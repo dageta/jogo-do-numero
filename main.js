@@ -1,7 +1,7 @@
-let numeroAleatorui = math.florr(math.random() *100) +1;
-const palpites = document.querySelector('palpites');
+let numeroAleatorio = math.florr(math.random() *100) +1;
+const palpites = document.querySelector('.palpites');
 const ultimoResultado = document.querySelector('.ultimoResultado');
-const baixoOuAuto = document.querySelector('.baixoOuAuto');
+const baixoOuAuto = document.querySelector('.baixoOuAlto');
 const envioPalpite = document.querySelector('.envioPalpite');
 const campoPalpite = document.querySelector('.campoPalpite')
 let contagemPalpites = 1;
@@ -13,7 +13,7 @@ function verificarPalpite() {
         palpites.textContent = "Palpites anteriores: ";
     }
 
-    palpites.textContent += palpiteUsuario = " ";
+    palpites.textContent += palpiteUsuario + " ";
 
     if (palpiteUsuario === neuroAleatorio) {
         ultimoResultado.textContent = "Parabens ! Você Acertou!";
@@ -21,8 +21,8 @@ function verificarPalpite() {
         baixoOuAlto.textContent = "";
         finalizarJogo();
     }else if (contagemPalpites === 10){
-        ultimoResultado.textcontent = "FIM DE JOGO!!";
-        baixoOuAlto.textcontent = "";
+        ultimoResultado.textContent = "FIM DE JOGO!!";
+        baixoOuAlto.textContent = "";
         finalizarJogo();
 } else{
         ultimoResultado.textContent = "Errado";
@@ -48,13 +48,13 @@ function finalizarJogo() {
     document.body.appendChild(botaoReiniciar);
     botaoReiniciar.textContent = 'reiniciar jogo';
     botaoReiniciar.classList.add('botaoReiniciar');
-    botaoReiniciar.addEventListener('click', reiniciar jogo);
+    botaoReiniciar.addEventListener('click', reiniciarjogo);
 }
 
 function reiniciarJogo() {
     contagemPalpites = 1;
-    const paragrafosReiniciar = document.querySelectorAll('.paragrafosResultados p'} 
-for {const paragrafoReiniciar of paragrafoReiniciar) {
+    const paragrafoReiniciar = document.querySelectorAll('.paragrafosResultados p'} 
+for (const paragrafoReiniciar of paragrafoReiniciar) {
     paragrafoReiniciar.textContent = "";
 }
 
@@ -64,7 +64,7 @@ for {const paragrafoReiniciar of paragrafoReiniciar) {
      campoPalpite.value = "";
      campoPalpite.focus();
      ultimoResultado.style.backgroundColor = 'white';
-     numeroAleatorio = math.floor(Math.random() * 100) +1;
+     numeroAleatorio = Math.floor(Math.random() * 100) +1;
 }
 
         
